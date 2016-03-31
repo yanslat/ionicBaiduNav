@@ -33,7 +33,7 @@ import android.widget.RelativeLayout;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class plugin-baiduNav extends CordovaPlugin {
+public class pluginbaiduNav extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
