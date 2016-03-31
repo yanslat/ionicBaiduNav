@@ -5,30 +5,15 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.LOG;
 import org.apache.cordova.PluginResult;
 
+import org.apache.cordova.CordovaActivity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.res.Configuration;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Handler;
-import android.view.Display;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup.LayoutParams;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
+import android.content.Intent;
+import android.net.Uri;
+import android.text.Html;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -42,7 +27,8 @@ public class pluginbaiduNav extends CordovaPlugin {
             //this.coolMethod(message, callbackContext);
             //调起百度地图客户端
             try {
-                 Intent intent = Intent.getIntent("intent://map/direction?origin=latlng:34.264642646862,108.95108518068|name:我家&destination=大雁塔&mode=driving®ion=西安&referer=Autohome|GasStation#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
+                String inputPar = "intent://map/direction?origin=latlng:34.264642646862,108.95108518068|name:我家&destination=大雁塔&mode=driving®ion=西安&referer=Autohome|GasStation#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end";
+                 Intent intent = Intent.getIntent(inputPar);
                      cordova.getActivity().startActivity(intent); //启动调用
                      // if(isInstallByread("com.baidu.BaiduMap")){
                      //     this.cordova.startActivity(intent); //启动调用
