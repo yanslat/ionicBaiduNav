@@ -5,19 +5,21 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.LOG;
 import org.apache.cordova.PluginResult;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Activity;  
-import android.content.Intent;  
-import android.os.Bundle;  
-import android.util.Log;  
+
 
 /**
  * This class echoes a string called from JavaScript.
  */
-public class plugin-baiduNav extends CordovaPlugin {
+public class pluginbaiduNav extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
